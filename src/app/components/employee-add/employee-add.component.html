@@ -1,0 +1,95 @@
+<div class="modal-header bg-gradient-primary text-white">
+  <h4 class="modal-title fw-bold">
+    <i class="fa fa-user-plus me-2"></i>Add New Employee
+  </h4>
+  <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+
+<div class="modal-body employee-form">
+  <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)" class="form-card">
+    <div class="form-group">
+      <label for="firstName" class="form-label">
+        <i class="fa fa-user me-2"></i>First Name
+      </label>
+      <input type="text" class="form-control" id="firstName" 
+             [(ngModel)]="employee.firstName" name="firstName" 
+             required minlength="2" maxlength="50"
+             [class.is-invalid]="isFieldInvalid('firstName', employeeForm)">
+      <div *ngIf="isFieldInvalid('firstName', employeeForm)" class="invalid-feedback animated-feedback">
+        <i class="fa fa-exclamation-circle me-2"></i>
+        <span *ngIf="employeeForm.controls['firstName']?.errors?.['required']">
+          First name is required
+        </span>
+        <span *ngIf="employeeForm.controls['firstName']?.errors?.['minlength']">
+          Must be at least 2 characters
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="lastName" class="form-label">
+        <i class="fa fa-user me-2"></i>Last Name
+      </label>
+      <input type="text" class="form-control" id="lastName" 
+             [(ngModel)]="employee.lastName" name="lastName" 
+             required minlength="2" maxlength="50"
+             [class.is-invalid]="isFieldInvalid('lastName', employeeForm)">
+      <div *ngIf="isFieldInvalid('lastName', employeeForm)" class="invalid-feedback animated-feedback">
+        <i class="fa fa-exclamation-circle me-2"></i>
+        <span *ngIf="employeeForm.controls['lastName']?.errors?.['required']">
+          Last name is required
+        </span>
+        <span *ngIf="employeeForm.controls['lastName']?.errors?.['minlength']">
+          Must be at least 2 characters
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email" class="form-label">
+        <i class="fa fa-envelope me-2"></i>Email
+      </label>
+      <input type="email" class="form-control" id="email" 
+             [(ngModel)]="employee.email" name="email" 
+             required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+             [class.is-invalid]="isFieldInvalid('email', employeeForm)">
+      <div *ngIf="isFieldInvalid('email', employeeForm)" class="invalid-feedback animated-feedback">
+        <i class="fa fa-exclamation-circle me-2"></i>
+        <span *ngIf="employeeForm.controls['email']?.errors?.['required']">
+          Email is required
+        </span>
+        <span *ngIf="employeeForm.controls['email']?.errors?.['pattern']">
+          Please enter a valid email
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="position" class="form-label">
+        <i class="fa fa-briefcase me-2"></i>Position
+      </label>
+      <input type="text" class="form-control" id="position" 
+             [(ngModel)]="employee.position" name="position" 
+             required minlength="3" maxlength="50"
+             [class.is-invalid]="isFieldInvalid('position', employeeForm)">
+      <div *ngIf="isFieldInvalid('position', employeeForm)" class="invalid-feedback animated-feedback">
+        <i class="fa fa-exclamation-circle me-2"></i>
+        <span *ngIf="employeeForm.controls['position']?.errors?.['required']">
+          Position is required
+        </span>
+        <span *ngIf="employeeForm.controls['position']?.errors?.['minlength']">
+          Must be at least 3 characters
+        </span>
+      </div>
+    </div>
+    
+    <div class="modal-footer bg-light">
+      <button type="button" class="btn btn-outline-secondary" (click)="activeModal.dismiss()">
+        <i class="fa fa-times me-2"></i>Cancel
+      </button>
+      <button type="submit" class="btn btn-gradient-primary" [disabled]="employeeForm.invalid">
+        <i class="fa fa-save me-2"></i>Save Employee
+      </button>
+    </div>
+  </form>
+</div>

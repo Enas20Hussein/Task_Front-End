@@ -1,0 +1,55 @@
+<div class="modal-header bg-gradient-primary text-white">
+  <h4 class="modal-title fw-bold">
+    <i class="fa fa-edit me-2"></i>Edit Employee
+  </h4>
+  <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+
+<div class="modal-body employee-edit">
+  <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)" class="edit-form">
+    <div class="mb-4 form-field">
+      <label for="firstName" class="form-label">
+        <i class="fa fa-user me-2"></i>First Name
+      </label>
+      <input type="text" class="form-control form-input" id="firstName" 
+             [(ngModel)]="employee.firstName" name="firstName" required>
+      <div class="form-underline"></div>
+    </div>
+
+    <div class="mb-4 form-field">
+      <label for="lastName" class="form-label">
+        <i class="fa fa-user me-2"></i>Last Name
+      </label>
+      <input type="text" class="form-control form-input" id="lastName" 
+             [(ngModel)]="employee.lastName" name="lastName" required>
+      <div class="form-underline"></div>
+    </div>
+
+    <div class="mb-4 form-field">
+      <label for="email" class="form-label">
+        <i class="fa fa-envelope me-2"></i>Email
+      </label>
+      <input type="email" class="form-control form-input" id="email" 
+             [(ngModel)]="employee.email" name="email" required email>
+      <div class="form-underline"></div>
+    </div>
+
+    <div class="mb-4 form-field">
+      <label for="position" class="form-label">
+        <i class="fa fa-briefcase me-2"></i>Position
+      </label>
+      <input type="text" class="form-control form-input" id="position" 
+             [(ngModel)]="employee.position" name="position" required>
+      <div class="form-underline"></div>
+    </div>
+
+    <div class="modal-footer bg-light">
+      <button type="button" class="btn btn-outline-secondary" (click)="activeModal.dismiss()">
+        <i class="fa fa-times me-2"></i>Cancel
+      </button>
+      <button type="submit" class="btn btn-gradient-primary" [disabled]="!employeeForm.valid">
+        <i class="fa fa-save me-2"></i>Update
+      </button>
+    </div>
+  </form>
+</div>

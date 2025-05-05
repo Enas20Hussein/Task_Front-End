@@ -1,0 +1,66 @@
+.bg-gradient-primary {
+    background: linear-gradient(135deg, rgb(163, 69, 250) 0%, rgb(222, 186, 255) 100%);
+  }
+  
+  .employee-details {
+    background-color: #f8f9fa;
+    padding: 25px;
+  }
+  
+  .detail-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    align-items: center;
+  }
+  
+  .detail-value {
+    color: #212529;
+    font-weight: 500;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid rgb(170, 78, 255);
+  }
+  
+  .email-link {
+    color: rgb(170, 78, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .email-link:hover {
+    color:rgb(170, 78, 255);
+    text-decoration: underline;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .btn-outline-primary {
+    border-color: rgb(170, 78, 255);
+    transition: all 0.3s;
+    color: rgb(160, 60, 253);
+  }
+  .btn-outline-primary:hover{
+    background-color: rgb(170, 78, 255);
+    color: #fff;
+  }
+  
+  /* Animation for modal appearance */
+  .modal-content {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

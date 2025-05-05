@@ -1,0 +1,92 @@
+.employee-edit {
+    background-color: #f8f9fa;
+    padding: 25px;
+  }
+  .modal-header {
+    background: linear-gradient(135deg, rgb(163, 69, 250) 0%, rgb(222, 186, 255) 100%);
+  }
+  .edit-form {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-field {
+    position: relative;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #dee2e6;
+    transition: all 0.3s;
+  }
+  
+  .form-input:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+  
+  .form-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #753ad5, #b176f3);
+    transition: width 0.3s;
+  }
+  
+  .form-input:focus ~ .form-underline {
+    width: 100%;
+  }
+  
+  .btn-gradient-primary {
+    background: linear-gradient(135deg ,#753ad5 0%, #b176f3 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s;
+  }
+  
+  .btn-gradient-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+  }
+  
+  .btn-gradient-primary:disabled {
+    background: #cccccc;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Animation for form elements */
+  .form-field {
+    animation: fadeInUp 0.4s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Delay animations for each field */
+  .form-field:nth-child(1) { animation-delay: 0.1s; }
+  .form-field:nth-child(2) { animation-delay: 0.2s; }
+  .form-field:nth-child(3) { animation-delay: 0.3s; }
+  .form-field:nth-child(4) { animation-delay: 0.4s; }

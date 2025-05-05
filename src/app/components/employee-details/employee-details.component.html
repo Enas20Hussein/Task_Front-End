@@ -1,0 +1,53 @@
+<div class="modal-header bg-gradient-primary text-white">
+  <h4 class="modal-title fw-bold">
+    <i class="fa fa-eye me-2"></i>Employee Details
+  </h4>
+  <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+
+<div class="modal-body employee-details">
+  <div class="detail-card">
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 detail-label">
+        <i class="fa fa-id-card me-2"></i>ID:
+      </div>
+      <div class="col-md-8 detail-value">{{ employee.id }}</div>
+    </div>
+    
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 detail-label">
+        <i class="fa fa-user me-2"></i>First Name:
+      </div>
+      <div class="col-md-8 detail-value">{{ employee.firstName }}</div>
+    </div>
+    
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 detail-label">
+        <i class="fa fa-user me-2"></i>Last Name:
+      </div>
+      <div class="col-md-8 detail-value">{{ employee.lastName }}</div>
+    </div>
+    
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 detail-label">
+        <i class="fa fa-envelope me-2"></i>Email:
+      </div>
+      <div class="col-md-8 detail-value">
+        <a href="mailto:{{employee.email}}" class="email-link">{{ employee.email }}</a>
+      </div>
+    </div>
+    
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 detail-label">
+        <i class="fa fa-briefcase me-2"></i>Position:
+      </div>
+      <div class="col-md-8 detail-value">{{ employee.position }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer bg-light">
+  <button type="button" class="btn btn-outline-primary" (click)="activeModal.dismiss()">
+    <i class="fa fa-times me-2"></i>Close
+  </button>
+</div>

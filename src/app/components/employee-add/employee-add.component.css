@@ -1,0 +1,115 @@
+.modal-header{
+    background: linear-gradient(135deg, rgb(163, 69, 250) 0%, rgb(222, 186, 255) 100%);
+
+}
+.employee-form {
+    background-color: #f8f9fa;
+    padding: 25px;
+  }
+  
+  .form-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    background-color: #f8f9fa;
+  }
+  
+  .form-control:focus {
+    border-color: rgb(170, 78, 255);
+    box-shadow: 0 0 0 0.25rem rgba(170, 78, 255, 0.25);
+    background-color: white;
+  }
+  
+  .invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 5px;
+  }
+  
+  .is-invalid ~ .invalid-feedback {
+    display: flex;
+    align-items: center;
+  }
+  
+  .is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+  }
+  
+  .animated-feedback {
+    animation: fadeInUp 0.3s ease-out;
+  }
+  
+  .btn-gradient-primary {
+    background: linear-gradient(135deg, rgb(163, 69, 250) 0%, rgb(222, 186, 255) 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s;
+  }
+  
+  .btn-gradient-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(163, 69, 250, 0.3);
+  }
+  
+  .btn-gradient-primary:disabled {
+    background: #cccccc;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form-group {
+    animation: fadeIn 0.4s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Delay animations for each field */
+  .form-group:nth-child(1) { animation-delay: 0.1s; }
+  .form-group:nth-child(2) { animation-delay: 0.2s; }
+  .form-group:nth-child(3) { animation-delay: 0.3s; }
+  .form-group:nth-child(4) { animation-delay: 0.4s; }

@@ -1,0 +1,31 @@
+.btn-primary{
+    background-color: rgb(145, 37, 247);
+    border-color: rgb(170, 78, 255);
+}
+.btn-primary:hover{
+    transition: all 0.3s;
+    background-color: rgb(154, 54, 247);
+
+}
+.Header{
+    margin: auto;
+}
+.input-group {
+    margin: auto;
+    border-radius: 25px;
+}
+
+.table{
+    text-align: center;
+    border-radius: 8px;
+}
+.table-responsive{
+    border-radius: 8px;
+}
+
+
+.pagination li .page-item.active{
+    background-color: rgb(154, 54, 247);
+    color: rgb(154, 54, 247);
+    
+}
